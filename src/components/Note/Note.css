@@ -1,9 +1,13 @@
-.customgrow {
-  transition: transform 0.25s ease-out;
-  transform: scale(1.05);
+.note {
+	transition: background-color .25s ease-in-out;
 }
 
-.shrink:active {
-  	transition: transform 0.25s ease-out;
-	transform: scale(.90);
+.edge {
+	box-shadow: 4px 0px 4px -4px rgba( 0, 0, 0, 0.8 );
+	z-index: 99;
+}
+
+.custom-grow {
+	transform: scale(1.05);
+	transition: transform .25s ease-in-out;
 }

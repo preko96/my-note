@@ -28,13 +28,16 @@ class Note extends Component {
 	render() {
 		const {active, mouseover} = this.state;
 		return(
-			<div className=	{'ph4 pv3 pointer bb shrink' + (active ? ' b--blue' : ' b--black-20')} 
-				onMouseOver={this.onMouseOverlap}
-				onMouseOut={this.onMouseLeave}
-				onClick={this.onClick}>
-			
-				<div className={'black-70' + (mouseover ? ' customgrow' : '') + (active ? ' blue' : '')}>{this.name}</div>
-				<div className={'black-30' + (mouseover ? ' customgrow' : '')}>{this.desc}</div>
+			<div className='flex'>
+				<div className={'ph2 pv4 b--black bg-black-20 edge' + ((mouseover && !active ) ? ' bg-lightest-blue' : '') + (active ? ' bg-blue' : '')}></div>
+				<div className=	{'pl3 note w-100 pv3 pointer' + ((mouseover && !active ) ? ' bg-washed-blue' : '') + (active ? ' bg-lightest-blue' : '')}
+					onMouseOver={this.onMouseOverlap}
+					onMouseOut={this.onMouseLeave}
+					onClick={this.onClick}>
+				
+					<div className={'black-60' + (mouseover ? ' custom-grow' : '') + (active ? ' blue' : '')}>{this.name}</div>
+					<div className={'black-30' + (mouseover ? ' custom-grow' : '')}>{this.desc}</div>
+				</div>
 			</div>
 		)
 	}
