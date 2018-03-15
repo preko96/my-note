@@ -55,7 +55,7 @@ class NoteList extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className='mt4 bt b--black-20'>
 				{
 					Notes.map((note, index) => {
 					 	return <Note name={note.name} desc={note.desc} key={index} onClick={ this.handleClick.bind(this) }/>

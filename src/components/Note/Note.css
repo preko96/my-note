@@ -4,7 +4,7 @@
 
 .edge {
 	box-shadow: 4px 0px 4px -4px rgba( 0, 0, 0, 0.8 );
-	z-index: 99;
+	z-index: 1;
 }
 
 .custom-grow {

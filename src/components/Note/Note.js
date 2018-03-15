@@ -29,7 +29,7 @@ class Note extends Component {
 		const {active, mouseover} = this.state;
 		return(
 			<div className='flex'>
-				<div className={'ph2 pv4 b--black bg-black-20 edge' + ((mouseover && !active ) ? ' bg-lightest-blue' : '') + (active ? ' bg-blue' : '')}></div>
+				<div className={'ph2 pv4 b--black bg-black-20 edge' + ((mouseover && !active ) ? ' bg-light-blue' : '') + (active ? ' bg-blue' : '')}></div>
 				<div className=	{'pl3 note w-100 pv3 pointer' + ((mouseover && !active ) ? ' bg-washed-blue' : '') + (active ? ' bg-lightest-blue' : '')}
 					onMouseOver={this.onMouseOverlap}
 					onMouseOut={this.onMouseLeave}
